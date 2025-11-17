@@ -4,17 +4,20 @@ services:
     build: .
     environment:
       - VITE_APP_NAME=App1
+    command: ["npm", "run", "dev", "--", "--port", "5173", "--host"]
     ports:
       - "5173:5173"
   app2:
     build: .
     environment:
       - VITE_APP_NAME=App2
+    command: ["npm", "run", "dev", "--", "--port", "5174", "--host"]
     ports:
-      - "5174:5173"
+      - "5174:5174"
   app3:
     build: .
     environment:
       - VITE_APP_NAME=App3
+    command: ["npm", "run", "dev", "--", "--port", "5175", "--host"]
     ports:
-      - "5175:5173"
+      - "5175:5175"
